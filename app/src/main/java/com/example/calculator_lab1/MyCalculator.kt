@@ -60,6 +60,8 @@ class MyCalculator : AppCompatActivity() {
         tvEquation.text = tvResult.text
     }
     fun onDel(view: View){
-        tvEquation.text = tvEquation.text.toString().substring(0,tvEquation.text.toString().length-1)
+        if (tvEquation.text.isNotEmpty()){
+            tvEquation.text = tvEquation.text.toString().substring(0,tvEquation.text.toString().length-1)
+        }
     }
 }
